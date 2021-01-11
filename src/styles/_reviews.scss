@@ -1,0 +1,137 @@
+.section-reviews {
+  background: $dark;
+  padding: 150px 0 200px;
+  clip-path: $clipPath;
+
+  &__inner {}
+
+  &__container {}
+
+  &__content {}
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .reviews-list-wrap {}
+
+  .reviews-list {
+    position: relative;
+    flex: 0 0 59%;
+    max-width: 59%;
+
+    .slick-track {
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+
+      & li {
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.slick-active {
+
+          button {
+            width: 40px;
+            border-radius: 5px;
+            background: $lightgreen;
+          }
+        }
+      }
+
+      & button {
+        cursor: pointer;
+        font-size: 0;
+        border: none;
+        outline: none;
+        height: 8px;
+        width: 8px;
+        background: #5bb495;
+        border-radius: 100%;
+        transition: .5s all;
+      }
+    }
+
+    &__item {
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+  }
+
+  .review {
+
+    &__inner {}
+
+    &__part {}
+
+    .review-photo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+
+      &__inner {
+        position: relative;
+        max-width: 170px;
+
+        img {
+          border-radius: 100%;
+        }
+
+        .fas {
+          position: absolute;
+          right: -10px;
+          top: -10px;
+          color: $lightgreen;
+          font-size: $fs-48;
+        }
+      }
+    }
+
+    .review-author {
+      margin-bottom: 36px;
+
+      &__name {
+        font-family: $Roboto;
+        font-weight: 700;
+        font-size: $fs-24;
+        text-align: center;
+        color: $lightgreen;
+      }
+
+      &__position {
+        font-size: $fs-15;
+        color: $lightblue;
+        text-align: center;
+      }
+    }
+
+    .review-text {
+
+      &__inner {
+        font-size: $fs-15;
+        color: $lightblue;
+        text-align: center;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,57 @@
+
+//colors
+$white: #ffffff;
+$silver: #dedfe3;
+$violet: #80809b;
+$blue: #5189a0;
+$dark: #44444f;
+$lightgreen: #65e496;
+$darkblue: #696980;
+$darkgreen: #5fc9ab;
+$lightblue: #9191b5;
+
+//fonts
+$fs-80: 80px;
+$fs-48: 48px;
+$fs-24: 24px;
+$fs-18: 18px;
+$fs-16: 16px;
+$fs-15: 15px;
+$fs-12: 12px;
+
+
+$Roboto: 'Roboto Slab', serif;
+$OpenSans: 'Open Sans', sans-serif;
+
+$btnGradient: linear-gradient(135deg, rgba(101,228,156,1) 0%, rgba(101,228,175,1) 100%);
+$clipPath: polygon(50% 10%, 100% 0, 100% 75%, 50% 83%, 0% 75%, 0 0);
+$breakpoints: (
+        'es': ( max-width: 575px ),
+        'xs': ( max-width: 767px ),
+        'sm': ( max-width: 991px ),
+        'md': ( max-width: 1199px ),
+        'lg': ( min-width: 1200px )
+);
+//breakpoints
+$lg-big: 1670;
+$lg: 1350;
+$md: 1200;
+$sm: 992;
+$xs: 767;
+$xs-min: 500;
+
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media only screen and #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

@@ -1,0 +1,125 @@
+.footer {
+  padding: 100px 0;
+  background: $dark;
+
+  &__inner {}
+
+  &__container {}
+
+  &__content {}
+
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      flex: 0 0 32%;
+      max-width: 32%;
+    }
+  }
+
+  .footer-description {
+
+    &__part {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer-logo {
+
+    &__inner {
+      max-width: 130px;
+    }
+  }
+
+  .footer-text {
+    color: $lightblue;
+    font-size: $fs-15;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-copyright {
+    color: $lightblue;
+    font-size: $fs-15;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-links {
+
+    &__title-wrap {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-family: $Roboto;
+      color: $lightgreen;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+  }
+
+  .footer-links-list {
+
+    &__item {}
+
+    &__link {
+      color: $lightblue;
+      font-size: $fs-15;
+      letter-spacing: 0.04em;
+      line-height: 1.9em;
+    }
+  }
+
+  .footer-contacts {
+
+    &__title-wrap {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-family: $Roboto;
+      color: $lightgreen;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+  }
+
+  .footer-contacts-list {
+
+    &__item {}
+
+    &__link {
+      color: $lightblue;
+      font-size: $fs-15;
+      letter-spacing: 0.04em;
+      line-height: 1.9em;
+    }
+  }
+
+  .footer-social {
+    padding-top: 16px;
+    display: flex;
+
+    &__item {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      color: $lightgreen;
+      font-size: $fs-15;
+    }
+  }
+
+}

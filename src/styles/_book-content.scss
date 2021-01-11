@@ -1,0 +1,163 @@
+.section-book-content {
+
+  &__inner {
+    padding: 100px 0;
+    background: #f5f6fa;
+  }
+
+  &__inner {}
+
+  &__content {
+
+  }
+
+  &__title-wrap {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    color: $dark;
+    text-align: center;
+    font-family: $Roboto;
+    font-weight: 700;
+    font-size: $fs-48;
+    letter-spacing: 0.04em;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-family: $Roboto;
+    font-size: $fs-18;
+    color: $lightgreen;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about {
+    flex: 0 0 40%;
+    max-width: 40%;
+
+    &__inner {}
+
+    &__part {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      font-family: $Roboto;
+      font-size: $fs-24;
+      color: $dark;
+      font-weight: 900;
+    }
+
+    &__text {
+      color: $darkblue;
+      font-size: $fs-15;
+      letter-spacing: 0.05em;
+    }
+
+    .social {
+
+      &__inner {
+        display: flex;
+      }
+
+      &__text {
+        font-family: $Roboto;
+        font-size: $fs-18;
+        color: $dark;
+        font-weight: 900;
+        margin-right: 16px;
+      }
+
+
+      .social-list {
+        display: flex;
+
+        &__item {
+          margin-right: 16px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+        }
+
+        &__link {
+          font-size: $fs-18;
+          color: $lightgreen;
+        }
+      }
+    }
+  }
+  .table {
+    flex: 0 0 45%;
+    max-width: 45%;
+
+    &__inner {}
+
+    &__part {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      font-family: $Roboto;
+      font-size: $fs-24;
+      color: $dark;
+      font-weight: 900;
+    }
+
+    .table-lists {
+
+      &__inner {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .table-list {
+      padding-left: 30px;
+
+      &__item {
+        position: relative;
+        font-size: $fs-15;
+        color: $darkblue;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          position: absolute;
+          content: '+';
+          color: $white;
+          width: 22px;
+          height: 22px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          left: -30px;
+          top: 0;
+          background: $darkgreen;
+        }
+      }
+    }
+
+    &__btn {
+      padding: 18px 44px;
+    }
+  }
+}

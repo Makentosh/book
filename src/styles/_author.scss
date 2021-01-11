@@ -1,0 +1,159 @@
+.section-author {
+
+  &__inner {
+    padding: 100px 0;
+
+    @include respond-to(sm) {
+
+    }
+  }
+
+  &__container {}
+
+  &__content {}
+
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+  }
+
+  &__content-bottom {}
+
+
+  &__left {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    .offer {
+
+      &__inner {}
+
+      &__part {}
+
+      &__author {
+        color: $dark;
+        font-family: $OpenSans;
+        font-weight: 400;
+        font-size: $fs-18;
+        margin-bottom: 16px;
+        letter-spacing: 0.05em;
+      }
+
+      &__title {
+        color: $dark;
+        font-family: $Roboto;
+        font-weight: 700;
+        font-size: $fs-48;
+        letter-spacing: 0.04em;
+      }
+
+      &__title-wrap {
+        margin-bottom: 30px;
+      }
+
+      &__subtitle {
+        font-family: $Roboto;
+        font-size: $fs-18;
+        color: $lightgreen;
+      }
+
+      &__text {
+        color: $dark;
+        font-size: $fs-15;
+        line-height: 1.6em;
+        letter-spacing: 0.05em;
+        margin-bottom: 36px;
+      }
+
+      &__price {
+        margin-bottom: 20px;
+      }
+
+      &__btn {
+        transition: .5s all;
+
+        &:hover {
+
+        }
+      }
+
+      .btn-subtext {
+        font-style: italic;
+        font-size: $fs-12;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+
+  &__right {
+    flex: 0 0 37%;
+    max-width: 37%;
+    width: 100%;
+
+    .section-photo {
+
+      &__inner {
+        position: relative;
+        background: linear-gradient(135deg, rgba(69, 112, 137, 1) 0%, rgba(81, 170, 157, 1) 100%);
+        width: 100%;
+        min-height: 558px;
+      }
+
+      &__image {
+        position: absolute;
+        left: -50px;
+        top: 50px;
+        z-index: 1;
+        max-width: 438px;
+        max-height: 466px;
+      }
+    }
+  }
+
+  .section-statistic {
+
+    &__inner {}
+
+    .statistic-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &__item {
+        flex: 0 0 30%;
+        max-width: 30%;
+      }
+
+    }
+
+    .statistic {
+
+      &__inner {}
+
+      &__part {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__number {
+        font-family: $Roboto;
+        font-size: $fs-80;
+        color: $lightgreen;
+        font-weight: 100;
+        text-align: center;
+        letter-spacing: 0.04em;
+      }
+
+      &__text {
+        text-align: center;
+        font-size: $fs-18;
+        color: $darkblue;
+      }
+    }
+  }
+}

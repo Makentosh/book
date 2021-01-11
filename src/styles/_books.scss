@@ -1,0 +1,96 @@
+.section-books {
+
+  &__inner {
+    padding: 100px 0;
+  }
+
+  &__container {}
+
+  &__content {}
+
+  &__title-wrap {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    color: $dark;
+    text-align: center;
+    font-family: $Roboto;
+    font-weight: 700;
+    font-size: $fs-48;
+    letter-spacing: 0.04em;
+  }
+
+
+  &__subtitle {
+    text-align: center;
+    font-family: $Roboto;
+    font-size: $fs-18;
+    color: $lightgreen;
+  }
+
+  &__list {}
+
+  .books-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+
+    &__item {
+      flex: 0 0 27%;
+      max-width: 27%;
+    }
+
+  }
+
+  .book {
+
+    &__inner {}
+
+    &__part {}
+
+    .book-image {
+      margin-bottom: 32px;
+    }
+
+    .book-description {
+
+      &__title {
+        font-family: $Roboto;
+        font-weight: 700;
+        font-size: $fs-24;
+        color: $dark;
+        text-align: center;
+        letter-spacing: 0.05em;
+        margin-bottom: 16px;
+      }
+
+      &__text {
+        text-align: center;
+        color: $darkblue;
+        font-size: $fs-15;
+        line-height: 1.6em;
+        margin-bottom: 16px;
+      }
+    }
+
+    .book-btn {
+      text-align: center;
+
+      &__link {
+        background: transparent;
+        padding: 0;
+        color: $lightgreen;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: $fs-15;
+        font-weight: 700;
+      }
+    }
+
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}
