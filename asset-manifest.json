@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/book/static/css/main.9b8584c2.chunk.css",
+    "main.js": "/book/static/js/main.b5038406.chunk.js",
+    "main.js.map": "/book/static/js/main.b5038406.chunk.js.map",
+    "runtime-main.js": "/book/static/js/runtime-main.a129e9ee.js",
+    "runtime-main.js.map": "/book/static/js/runtime-main.a129e9ee.js.map",
+    "static/js/2.86b92026.chunk.js": "/book/static/js/2.86b92026.chunk.js",
+    "static/js/2.86b92026.chunk.js.map": "/book/static/js/2.86b92026.chunk.js.map",
+    "index.html": "/book/index.html",
+    "static/css/main.9b8584c2.chunk.css.map": "/book/static/css/main.9b8584c2.chunk.css.map",
+    "static/js/2.86b92026.chunk.js.LICENSE.txt": "/book/static/js/2.86b92026.chunk.js.LICENSE.txt",
+    "static/media/emma.5310f9c7.jpg": "/book/static/media/emma.5310f9c7.jpg",
+    "static/media/girl-second.39be5c05.jpg": "/book/static/media/girl-second.39be5c05.jpg",
+    "static/media/girl.baa5c5dd.png": "/book/static/media/girl.baa5c5dd.png",
+    "static/media/main-book.1f272973.png": "/book/static/media/main-book.1f272973.png",
+    "static/media/photo.c3fb7fc7.jpg": "/book/static/media/photo.c3fb7fc7.jpg",
+    "static/media/photographer.765786c3.jpg": "/book/static/media/photographer.765786c3.jpg",
+    "static/media/woman.7c90baa8.jpg": "/book/static/media/woman.7c90baa8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a129e9ee.js",
+    "static/js/2.86b92026.chunk.js",
+    "static/css/main.9b8584c2.chunk.css",
+    "static/js/main.b5038406.chunk.js"
+  ]
+}
