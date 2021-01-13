@@ -3,10 +3,14 @@ export function ScrollTo(selector) {
 
   if(!anchor) return
 
+  window.location.hash = selector
+
   window.scrollTo({
     left: 0,
     top: anchor.offsetTop,
     behavior: "smooth"
   })
+
+
 
 }

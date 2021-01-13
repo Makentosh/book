@@ -1,7 +1,9 @@
 import React from 'react';
-import Photographer from '../../images/photographer.jpg'
-import Photo from '../../images/photo.jpg'
-import GirlSecond from '../../images/girl-second.jpg'
+import './Blog.scss';
+import Photographer from '../../images/photographer.jpg';
+import Photo from '../../images/photo.jpg';
+import GirlSecond from '../../images/girl-second.jpg';
+import Button from '../Button';
 
 const Blog = () => {
   return (
@@ -102,13 +104,8 @@ const Blog = () => {
                 </ul>
               </div>
               <div className="section-blog__btn read-blog">
-                <button className="btn read-blog__btn">
-                  Read more in the blog
-                  <span/>
-                  <span/>
-                  <span/>
-                  <span/>
-                </button>
+                <Button className="read-blog__btn"
+                        title="Read more in the blog"/>
               </div>
             </div>
           </div>

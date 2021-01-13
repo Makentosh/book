@@ -1,4 +1,6 @@
 import React from 'react';
+import './NewsLetter.scss';
+import Button from '../Button';
 
 const NewLetter = () => {
   return (
@@ -26,13 +28,9 @@ const NewLetter = () => {
                         <input type="text" className="form__input" placeholder="Enter your email"/>
                       </div>
                       <div className="form__part">
-                        <button className="btn subscribe__btn" type="submit">
-                          Subscribe
-                          <span/>
-                          <span/>
-                          <span/>
-                          <span/>
-                        </button>
+                        <Button className="subscribe__btn"
+                                type="submit"
+                                title="Subscribe"/>
                       </div>
                     </div>
                   </div>

@@ -1,6 +1,7 @@
 import React from 'react';
+import './Reviews.scss';
 import Slider from "react-slick";
-import Girl from '../../images/girl.png'
+import Girl from '../../images/girl.png';
 
 const Reviews = ({...props}) => {
   let settings = {

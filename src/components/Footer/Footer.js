@@ -1,5 +1,7 @@
-import React from 'react'
-import FooterLogo from '../../images/footer-logo.png'
+import React from 'react';
+import './Footer.scss';
+import FooterLogo from '../../images/footer-logo.png';
+import {FacebookIcon, SlackIcon, TweeterIcon, TwitchIcon, ViberIcon, YoutubeIcon} from '../../images';
 
 const Footer = ({...props}) => {
   return (
@@ -81,32 +83,32 @@ const Footer = ({...props}) => {
                       <ul className="footer-social">
                         <li className="footer-social__item">
                           <a href="/" className="footer-social__link">
-                            <i className="fab fa-facebook-f"/>
+                            <FacebookIcon/>
                           </a>
                         </li>
                         <li className="footer-social__item">
                           <a href="/" className="footer-social__link">
-                            <i className="fab fa-twitter"/>
+                            <TweeterIcon/>
                           </a>
                         </li>
                         <li className="footer-social__item">
                           <a href="/" className="footer-social__link">
-                            <i className="fab fa-twitch"/>
+                            <TwitchIcon/>
                           </a>
                         </li>
                         <li className="footer-social__item">
                           <a href="/" className="footer-social__link">
-                            <i className="fab fa-youtube"/>
+                            <YoutubeIcon/>
                           </a>
                         </li>
                         <li className="footer-social__item">
                           <a href="/" className="footer-social__link">
-                            <i className="fab fa-slack-hash"/>
+                            <SlackIcon/>
                           </a>
                         </li>
                         <li className="footer-social__item">
                           <a href="/" className="footer-social__link">
-                            <i className="fab fa-viber"/>
+                            <ViberIcon/>
                           </a>
                         </li>
                       </ul>

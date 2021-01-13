@@ -1,4 +1,7 @@
 import React from 'react';
+import './BookContent.scss';
+import Button from '../Button';
+import {AmazonIcon, SassIcon, VueIcon} from '../../images';
 
 const BookContent = () => {
   return (
@@ -39,17 +42,17 @@ const BookContent = () => {
                           <div className="social__list social-list">
                             <li className="social-list__item">
                               <a href="http://google.com.ua" className="social-list__link">
-                                <i className="fab fa-vuejs"/>
+                                <VueIcon/>
                               </a>
                             </li>
                             <li className="social-list__item">
                               <a href="http://google.com.ua" className="social-list__link">
-                                <i className="fab fa-amazon"/>
+                                <AmazonIcon/>
                               </a>
                             </li>
                             <li className="social-list__item">
                               <a href="http://google.com.ua" className="social-list__link">
-                                <i className="fab fa-sass"/>
+                                <SassIcon/>
                               </a>
                             </li>
                           </div>
@@ -104,13 +107,8 @@ const BookContent = () => {
                       </div>
                     </div>
                     <div className="table__part">
-                      <button className="btn table__btn">
-                        More
-                        <span/>
-                        <span/>
-                        <span/>
-                        <span/>
-                      </button>
+                      <Button className="table__btn"
+                              title="More"/>
                     </div>
                   </div>
                 </div>

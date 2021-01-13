@@ -1,5 +1,7 @@
 import React from 'react';
 import Emma from '../../images/emma.jpg'
+import './Autor.scss'
+import Button from '../Button';
 
 const Author = () => {
   return (
@@ -33,13 +35,11 @@ const Author = () => {
                         mollit anim id est laborum. Sed ut
                       </div>
                       <div className="offer__part offer__price">
-                        <a href="http://google.com.ua" className="btn offer__btn">
-                          Read full biography
-                          <span/>
-                          <span/>
-                          <span/>
-                          <span/>
-                        </a>
+                        <Button link={true}
+                                className="offer__btn"
+                                url="http://google.com.ua"
+                                title="Read full biography"/>
+
                       </div>
                       <div className="offer__part offer__btn-subtext">
                         <p className="btn-subtext">* Some conditions may applicable</p>

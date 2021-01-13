@@ -1,5 +1,7 @@
 import React from 'react';
-import Woman from '../../images/woman.jpg'
+import './Events.scss';
+import Woman from '../../images/woman.jpg';
+import Button from '../Button';
 
 const Events = () => {
   return (
@@ -48,13 +50,8 @@ const Events = () => {
                           </div>
                         </div>
                         <div className="event__part event-register">
-                          <button className="btn event-register__btn">
-                            Register
-                            <span/>
-                            <span/>
-                            <span/>
-                            <span/>
-                          </button>
+                          <Button className="event-register__btn"
+                                  title="Register"/>
                         </div>
                       </div>
                     </div>
@@ -78,13 +75,8 @@ const Events = () => {
                           </div>
                         </div>
                         <div className="event__part event-register">
-                          <button className="btn event-register__btn">
-                            Register
-                            <span/>
-                            <span/>
-                            <span/>
-                            <span/>
-                          </button>
+                          <Button className="event-register__btn"
+                                  title="Register"/>
                         </div>
                       </div>
                     </div>

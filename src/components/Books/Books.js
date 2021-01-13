@@ -1,7 +1,9 @@
 import React from 'react';
-import BookOne from '../../images/book-one.png'
-import BookSecond from '../../images/book-second.png'
-import BookThree from '../../images/book-three.png'
+import './Books.scss';
+import BookOne from '../../images/book-one.png';
+import BookSecond from '../../images/book-second.png';
+import BookThree from '../../images/book-three.png';
+import Button from '../Button';
 
 const Books = () => {
   return (
@@ -92,13 +94,8 @@ const Books = () => {
                   </li>
                 </ul>
                 <div className="section-books__btn">
-                  <button className="btn btn-all">
-                    Browse All Books
-                    <span/>
-                    <span/>
-                    <span/>
-                    <span/>
-                  </button>
+                  <Button className="btn-all"
+                          title="Browse All Books"/>
                 </div>
               </div>
             </div>
