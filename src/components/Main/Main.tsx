@@ -1,11 +1,12 @@
 import React from 'react';
+import Blog from '../Blog';
+import Reviews from '../Reviews';
+import Books from '../Books';
+import BookContent from '../BookContent';
 import Author from '../Author/Author';
-import BookContent from '../BookContent/BookContent';
-import Books from '../Books/Books';
-import Reviews from '../Reviews/Reviews';
-import Events from '../Events/Events';
-import Blog from '../Blog/Blog';
-import NewLetter from '../NewsLetter/NewsLetter';
+import NewLetter from '../NewsLetter';
+import Events from '../Events';
+
 
 const Main = ({...props}) => {
   return (

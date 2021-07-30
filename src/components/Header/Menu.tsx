@@ -13,7 +13,13 @@ const menu = [
   {title: 'Contact', hash: '#subscribe'},
 ]
 
-const MenuItem = ({title, hash, ...props}) => {
+
+type MenuItemT = {
+    title: string
+    hash: string
+}
+
+const MenuItem: React.FC<MenuItemT> = ({title, hash, ...props}) => {
   return (
       <li className="menu__item">
         <button onClick={() => ScrollTo(hash)}

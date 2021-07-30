@@ -1,7 +1,7 @@
 import React from 'react';
 import './BookContent.scss';
-import Button from '../Button';
 import {AmazonIcon, SassIcon, VueIcon} from '../../images';
+import Button from '../Button';
 
 const BookContent = () => {
   return (

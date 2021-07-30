@@ -1,5 +1,5 @@
-export function ScrollTo(selector) {
-  let anchor = document.querySelector(selector)
+export function ScrollTo(selector: string) {
+  let anchor: HTMLAnchorElement | null = document.querySelector(selector)
 
   if(!anchor) return
 
@@ -10,7 +10,4 @@ export function ScrollTo(selector) {
     top: anchor.offsetTop,
     behavior: "smooth"
   })
-
-
-
 }

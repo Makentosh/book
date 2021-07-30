@@ -3,7 +3,7 @@ import './ScrollToTopButton.scss';
 
 const ScrollToTopButton = ({...props}) => {
   const [view, setView] = useState(false)
-  const offsetTopNumber = 150;
+  const offsetTopNumber: number = 150;
 
   let handleScroll = () => {
     (document.body.scrollTop > offsetTopNumber || document.documentElement.scrollTop > offsetTopNumber)
