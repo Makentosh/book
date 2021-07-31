@@ -1,4 +1,4 @@
-React APP buildin from technologies 
+React APP building from technologies 
 TypeScript, Redux-Toolkit, React-hook-form
 
 View site https://makentosh.github.io/book/
