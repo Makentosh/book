@@ -1,3 +1,6 @@
+React APP buildin from technologies 
+TypeScript, Redux-Toolkit, React-hook-form
+
 View site https://makentosh.github.io/book/
 
 # Getting Started with Create React App
