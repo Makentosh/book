@@ -1,6 +1,6 @@
 import React from 'react';
 import './NewsLetter.scss';
-import Button from '../Button';
+import NewsLetterForm from './NewsLetterForm';
 
 const NewLetter = () => {
   return (
@@ -21,20 +21,7 @@ const NewLetter = () => {
                 </div>
               </div>
               <div className="section-newsletter__right subscribe">
-                <form action="#">
-                  <div className="form">
-                    <div className="form__control">
-                      <div className="form__part">
-                        <input type="text" className="form__input" placeholder="Enter your email"/>
-                      </div>
-                      <div className="form__part">
-                        <Button className="subscribe__btn"
-                                type="submit"
-                                title="Subscribe"/>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                <NewsLetterForm/>
               </div>
             </div>
           </div>

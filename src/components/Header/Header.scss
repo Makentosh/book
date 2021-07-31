@@ -30,6 +30,9 @@
       z-index: 3;
       background: linear-gradient(135deg, rgba(69, 112, 137, 1) 0%, rgba(81, 170, 157, 1) 100%);
 
+      @include respond-to(sm) {
+        left: 0;
+      }
     }
 
     &__logo {
@@ -187,6 +190,10 @@
     &__inner {
       display: flex;
       align-items: flex-start;
+
+      @include respond-to(sm) {
+        flex-wrap: wrap;
+      }
     }
 
     .section-offer-img {
@@ -194,13 +201,30 @@
       max-width: 36%;
       margin-right: 50px;
 
+      @include respond-to(xs) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
+
       &__wrap {
+
+        @include respond-to(xs) {
+          max-width: 50%;
+          margin: 0 auto;
+        }
       }
     }
 
     .offer {
       flex: 0 0 50%;
       max-width: 50%;
+
+      @include respond-to(xs) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
 
       &__inner {
       }

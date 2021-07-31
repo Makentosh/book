@@ -5,6 +5,10 @@
   &__inner {
     padding: 100px 0;
     background: #f5f6fa;
+
+    @include respond-to(xs) {
+      padding: 50px 0;
+    }
   }
 
   &__inner {}
@@ -36,11 +40,21 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include respond-to(sm) {
+      flex-wrap: wrap;
+    }
   }
 
   .about {
     flex: 0 0 40%;
     max-width: 40%;
+
+    @include respond-to(sm) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
 
     &__inner {}
 
@@ -99,9 +113,16 @@
       }
     }
   }
+
   .table {
     flex: 0 0 45%;
     max-width: 45%;
+
+
+    @include respond-to(sm) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
 
     &__inner {}
 
@@ -124,12 +145,30 @@
 
       &__inner {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
+
+        @include respond-to(xs) {
+          flex-direction: column;
+        }
       }
     }
 
     .table-list {
       padding-left: 30px;
+      margin-right: 30px;
+
+      @include respond-to(xs) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        @include respond-to(xs) {
+          margin-bottom: 0;
+        }
+      }
 
       &__item {
         position: relative;
