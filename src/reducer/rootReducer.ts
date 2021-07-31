@@ -1,11 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit";
-// import counterReducer from "../features/counter/counterSlice";
-// import modalReducer from "../slices/modalSlice";
+import {configureStore} from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux'
+import modalReducer from '../slices/modalSlice';
 
-export default configureStore({
+const store = configureStore({
     reducer: {
-        // counter: counterReducer,
-        // modal: modalReducer
+        modal: modalReducer
     },
     devTools: true
 });
+
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch = () => useDispatch<AppDispatch>();
+export type RootState = ReturnType<typeof store.getState>
+
+
+export default store;

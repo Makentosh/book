@@ -1,0 +1,106 @@
+@import 'src/scss/variables';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34,59,69,0.60);
+  z-index: 9999;
+  overflow-y: auto;
+
+  @include respond-to(xs) {
+    overflow-y: auto;
+  }
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  min-width: 385px;
+  box-shadow: 0 5px 40px 0 rgba(50, 50, 65, 0.25);
+  background: $white;
+  outline: none;
+  transform: translate(-50%, -50%);
+
+  @include respond-to(xs) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 16px;
+    overflow-y: scroll;
+    min-width: auto;
+  }
+
+  &--xs {
+    min-width: 600px;
+  }
+
+  &--sm {
+    min-width: 800px;
+  }
+
+  //&--phone {
+  //  display: flex;
+  //  align-items: center;
+  //  margin: 0;
+  //  width: 100%;
+  //  border-radius: 0;
+  //  padding: 16px;
+  //  overflow-y: scroll;
+  //  min-width: auto;
+  //}
+
+  &__content {
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+
+  &__header {
+    text-align: center;
+    padding: 13px 0;
+    background: #223B45;
+    font-size: 20px;
+    color: $white;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__body {
+    padding: 15px 30px;
+
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+
+    &:before {
+      content: ' \2716';
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+}

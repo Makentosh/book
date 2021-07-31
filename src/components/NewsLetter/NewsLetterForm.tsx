@@ -2,20 +2,22 @@ import React from 'react';
 import {useForm} from 'react-hook-form';
 import Button from '../Button';
 import {EMAIL_PATTER_VALIDATION, VALIDATION_MESSAGES} from '../Tools';
+import {useDispatch} from 'react-redux';
+import {openModalSuccess} from '../../actions/modalActions';
 
 interface FormData {
     email: string;
 }
 
 const NewsLetterForm = ({...props}) => {
-    const {
-        register,
-        handleSubmit,
-        formState: {errors}
-    } = useForm<FormData>();
+    const dispatch = useDispatch();
+
+    const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>();
 
     const onSubmit = handleSubmit((data) => {
         console.log(data, 'data');
+        dispatch(openModalSuccess())
+        reset();
     });
 
 

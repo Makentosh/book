@@ -23,6 +23,7 @@ type validationMessages = {
         pattern: string
     }
 }
+
 export const VALIDATION_MESSAGES: validationMessages = {
     email: {
         required: 'Поле обязательное для заполнения',
