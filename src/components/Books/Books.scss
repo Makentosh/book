@@ -1,9 +1,13 @@
-@import '../../variables/variables';
+@import '../../scss/variables';
 
 .section-books {
 
   &__inner {
     padding: 100px 0;
+
+    @include respond-to(xs) {
+      padding: 50px 0;
+    }
   }
 
   &__container {}
@@ -38,9 +42,25 @@
     justify-content: space-around;
     margin-bottom: 50px;
 
+    @include respond-to(xs) {
+      flex-wrap: wrap;
+    }
+
     &__item {
       flex: 0 0 27%;
       max-width: 27%;
+
+      @include respond-to(xs) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 32px;
+      }
+
+      &:last-child {
+        @include respond-to(xs) {
+          margin-bottom: 0;
+        }
+      }
     }
 
   }
@@ -53,6 +73,11 @@
 
     .book-image {
       margin-bottom: 32px;
+
+      @include respond-to(xs) {
+        max-width: 50%;
+        margin: 0 auto;
+      }
     }
 
     .book-description {

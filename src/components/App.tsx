@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
 import ScrollToTopButton from './ScrollToTopButton';
+import SuccessModal from './SuccessModal';
 
 const App = ({...props}) => {
   return (
@@ -11,6 +12,7 @@ const App = ({...props}) => {
       <Main/>
       <Footer/>
       <ScrollToTopButton/>
+      <SuccessModal/>
     </>
   );
 }

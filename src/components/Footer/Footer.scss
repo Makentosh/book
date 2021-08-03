@@ -1,8 +1,12 @@
-@import '../../variables/variables';
+@import '../../scss/variables';
 
 .footer {
   padding: 100px 0;
   background: $dark;
+
+  @include respond-to(xs) {
+    padding: 50px 0;
+  }
 
   &__inner {}
 
@@ -12,11 +16,37 @@
 
   .footer-nav {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
+
+    @include respond-to(xs) {
+      flex-wrap: wrap;
+    }
 
     &__item {
       flex: 0 0 32%;
       max-width: 32%;
+
+      @include respond-to(xs) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 16px;
+        padding-bottom: 16px;
+      }
+
+      @include respond-to(es) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-bottom: 24px;
+      }
+
+      &:last-child {
+        @include respond-to(es){
+          margin-bottom: 0;
+        }
+      }
+
     }
   }
 
