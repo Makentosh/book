@@ -17,12 +17,22 @@ const menu = [
 type MenuItemT = {
     title: string
     hash: string
+    handleOpenDropdown?: () => void
 }
 
-const MenuItem: React.FC<MenuItemT> = ({title, hash, ...props}) => {
+const MenuItem: React.FC<MenuItemT> = ({title, hash, handleOpenDropdown, ...props}) => {
+  let handleClick = () => {
+    ScrollTo(hash)
+
+    if(handleOpenDropdown) {
+      handleOpenDropdown();
+    }
+
+  }
+
   return (
       <li className="menu__item">
-        <button onClick={() => ScrollTo(hash)}
+        <button onClick={handleClick}
                 className={`menu__link ${window.location.hash === hash ? 'active' : ''}`}>
           {title}
         </button>
@@ -30,12 +40,18 @@ const MenuItem: React.FC<MenuItemT> = ({title, hash, ...props}) => {
   )
 }
 
-const Menu = ({className = '', ...props}) => {
+export interface MenuInterface {
+  className?: string
+  handleOpenDropdown?: () => void
+}
+
+const Menu: React.FC<MenuInterface> = ({className = '', handleOpenDropdown,  ...props}) => {
   return (
       <ul className={`menu ${className}`}>
 
         {menu.map((item, index) => <MenuItem title={item.title}
                                                                             key={index}
+                                                                            handleOpenDropdown={handleOpenDropdown}
                                                                             hash={item.hash}/>)}
       </ul>
   )

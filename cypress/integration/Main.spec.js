@@ -1,5 +1,5 @@
 describe('start app', () => {
-  it('sdfdfgdfs', () => {
+  it('main app', () => {
     cy.visit('/')
 
 

@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Logo from '../../images/logo.png';
 import Menu from './Menu';
-import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 const Navbar = ({...props}) => {
     const [fixed, setFixed] = useState(false)
@@ -20,11 +19,17 @@ const Navbar = ({...props}) => {
         window.addEventListener('scroll', handleNavScroll)
     }, [])
 
+    useEffect(() => {
+      if(openDropdown) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }, [openDropdown])
+
     let handleOpenDropdown = () => {
         setOpenDropdown(!openDropdown)
     }
-
-    useOnClickOutside(dropdownRef, handleOpenDropdown)
 
     return (
         <div className={`header__top section-navbar 
@@ -41,17 +46,22 @@ const Navbar = ({...props}) => {
             </nav>
 
             <nav className="section-navbar__menu--mobile">
-                <div className={`burger burger__btn 
+                <button className={`burger burger__btn 
                             ${openDropdown ? 'active' : ''}
                             `}
-                     ref={dropdownRef}
                      onClick={handleOpenDropdown}>
                     <span className="burger__line line-one"/>
                     <span className="burger__line line-second"/>
                     <span className="burger__line line-three"/>
-                </div>
-                <Menu className={`menu-mobile ${openDropdown ? 'show' : ''}`}/>
+                </button>
+                <div className={`menu-mobile-overlay 
+                                ${openDropdown ? 'menu-mobile-overlay--show' : ''}`}
+                     onClick={handleOpenDropdown}/>
 
+                <div ref={dropdownRef}>
+                  <Menu handleOpenDropdown={handleOpenDropdown}
+                        className={`menu-mobile ${openDropdown ? 'show' : ''}`}/>
+                </div>
             </nav>
         </div>
     )
