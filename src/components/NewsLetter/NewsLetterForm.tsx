@@ -10,15 +10,19 @@ interface FormData {
   email: string;
 }
 
+const initialState: FormData = {
+  email: ''
+}
+
 const NewsLetterForm = ({ ...props }) => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>();
 
   const onSubmit = handleSubmit((data) => {
     console.log(data, 'data');
     dispatch(openModalSuccess());
-    reset();
+    reset(initialState);
   });
 
 
@@ -28,6 +32,7 @@ const NewsLetterForm = ({ ...props }) => {
           <div className="form__control">
             <div className="form__part">
               <input type="text"
+                     defaultValue={initialState.email}
                      {...register('email', {
                        required: VALIDATION_MESSAGES.email.required,
                        pattern: {
