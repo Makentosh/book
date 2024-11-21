@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://Makentosh.github.io/book",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.6.1",
+    "@reduxjs/toolkit": "2.3.0",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
@@ -13,13 +13,14 @@
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "axios": "^0.21.1",
+    "eslint-config-react-app": "^6.0.0",
     "query-string": "^7.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^7.12.1",
     "react-modal": "^3.14.3",
     "react-redux": "^7.2.4",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.27.13",
     "sass": "^1.36.0",
     "typescript": "^4.3.5",
@@ -31,16 +32,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "cypress": "cypress open"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "plugin:cypress/recommended"
+      "react-app/jest"
     ],
     "overrides": [
       {
@@ -66,17 +63,10 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.3.6",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/node-logger": "^6.2.9",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.3.6",
     "@types/react-modal": "^3.12.1",
     "@types/react-slick": "^0.23.5",
     "@typescript-eslint/parser": "^4.29.0",
-    "cypress": "^8.1.0",
-    "eslint-plugin-cypress": "^2.11.3",
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^6.2.0",
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11"
   }
 }

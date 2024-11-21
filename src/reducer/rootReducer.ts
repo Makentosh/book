@@ -1,14 +1,11 @@
-import {configureStore} from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import modalReducer from '../slices/modalSlice';
-import pokemonsReducer from '../slices/pokemonSlice';
-// import {useDispatch} from 'react-redux';
 
 const store = configureStore({
-    reducer: {
-        modal: modalReducer,
-        pokemons: pokemonsReducer
-    },
-    devTools: true
+  reducer: {
+    modal: modalReducer,
+  },
+  devTools: true
 });
 
 export type AppDispatch = typeof store.dispatch;
