@@ -1,13 +1,21 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export interface initialStateInterface {
-  [key: string]: {
-    isOpen: boolean
-  }
+enum ModalVariant {
+  success = 'success',
+  info = 'info',
+  warning = 'warning'
 }
 
+type ModalType = keyof typeof ModalVariant;
+
+export type initialStateInterface = {
+  [key in ModalType]: {
+    isOpen: boolean
+  };
+};
+
 export interface modalActionInterface {
-  type: string
+  type: ModalType
 }
 
 const initialState: initialStateInterface = {
@@ -15,6 +23,9 @@ const initialState: initialStateInterface = {
     isOpen: false
   },
   info: {
+    isOpen: false
+  },
+  warning: {
     isOpen: false
   }
 };

@@ -1,10 +1,10 @@
 import React from 'react';
-import {useForm} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import Button from '../Button';
-import {EMAIL_PATTER_VALIDATION, VALIDATION_MESSAGES} from '../Tools';
-import {useDispatch} from 'react-redux';
-import {openModalSuccess} from '../../actions/modalActions';
-import {AppDispatch} from '../../reducer/rootReducer';
+import { EMAIL_PATTER_VALIDATION, VALIDATION_MESSAGES } from '../Tools';
+import { useDispatch } from 'react-redux';
+import { openModalSuccess } from '../../actions/modalActions';
+import { AppDispatch } from '../../reducer/rootReducer';
 
 interface FormData {
   email: string;
@@ -12,9 +12,9 @@ interface FormData {
 
 const initialState: FormData = {
   email: ''
-}
+};
 
-const NewsLetterForm = ({ ...props }) => {
+const NewsLetterForm = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>();
@@ -32,22 +32,22 @@ const NewsLetterForm = ({ ...props }) => {
           <div className="form__control">
             <div className="form__part">
               <input type="text"
-                     defaultValue={initialState.email}
-                     {...register('email', {
+                     defaultValue={ initialState.email }
+                     { ...register('email', {
                        required: VALIDATION_MESSAGES.email.required,
                        pattern: {
                          value: EMAIL_PATTER_VALIDATION,
                          message: VALIDATION_MESSAGES.email.pattern
                        }
-                     })}
+                     }) }
                      name="email"
-                     className={`form__input ${errors.email ? 'form__input--invalid' : ''}`}
+                     className={ `form__input ${ errors.email ? 'form__input--invalid' : '' }` }
                      placeholder="Enter your email"/>
-              {errors.email && <div className="error">{errors.email.message}</div>}
+              { errors.email && <div className="error">{ errors.email.message }</div> }
             </div>
             <div className="form__part">
               <Button className="subscribe__btn"
-                      onClick={onSubmit}
+                      onClick={ onSubmit }
                       title="Subscribe"/>
             </div>
           </div>

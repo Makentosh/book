@@ -8,7 +8,7 @@ import NewLetter from '../NewsLetter';
 import Events from '../Events';
 
 
-const Main = ({...props}) => {
+const Main = ({ ...props }) => {
   return (
       <main className="content">
         <Author/>
@@ -19,7 +19,7 @@ const Main = ({...props}) => {
         <Blog/>
         <NewLetter/>
       </main>
-  )
-}
+  );
+};
 
 export default Main;
