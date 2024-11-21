@@ -1,27 +1,20 @@
 {
   "files": {
-    "main.css": "/book/static/css/main.ced27337.chunk.css",
-    "main.js": "/book/static/js/main.fb53b899.chunk.js",
-    "main.js.map": "/book/static/js/main.fb53b899.chunk.js.map",
-    "runtime-main.js": "/book/static/js/runtime-main.35a0726d.js",
-    "runtime-main.js.map": "/book/static/js/runtime-main.35a0726d.js.map",
-    "static/js/2.18d8c6f1.chunk.js": "/book/static/js/2.18d8c6f1.chunk.js",
-    "static/js/2.18d8c6f1.chunk.js.map": "/book/static/js/2.18d8c6f1.chunk.js.map",
+    "main.css": "/book/static/css/main.8fd6d1e5.css",
+    "main.js": "/book/static/js/main.60a3f317.js",
+    "static/media/girl.png": "/book/static/media/girl.baa5c5dd6233f887a30d.png",
+    "static/media/woman.jpg": "/book/static/media/woman.7c90baa80fb426df71e1.jpg",
+    "static/media/girl-second.jpg": "/book/static/media/girl-second.39be5c05679010a7bbef.jpg",
+    "static/media/emma.jpg": "/book/static/media/emma.5310f9c71279fbc9a8b6.jpg",
+    "static/media/photo.jpg": "/book/static/media/photo.c3fb7fc7d1b79300a70c.jpg",
+    "static/media/photographer.jpg": "/book/static/media/photographer.765786c3aede82d38ac4.jpg",
+    "static/media/main-book.png": "/book/static/media/main-book.1f272973060d2cdd2e4e.png",
     "index.html": "/book/index.html",
-    "static/css/main.ced27337.chunk.css.map": "/book/static/css/main.ced27337.chunk.css.map",
-    "static/js/2.18d8c6f1.chunk.js.LICENSE.txt": "/book/static/js/2.18d8c6f1.chunk.js.LICENSE.txt",
-    "static/media/emma.5310f9c7.jpg": "/book/static/media/emma.5310f9c7.jpg",
-    "static/media/girl-second.39be5c05.jpg": "/book/static/media/girl-second.39be5c05.jpg",
-    "static/media/girl.baa5c5dd.png": "/book/static/media/girl.baa5c5dd.png",
-    "static/media/main-book.1f272973.png": "/book/static/media/main-book.1f272973.png",
-    "static/media/photo.c3fb7fc7.jpg": "/book/static/media/photo.c3fb7fc7.jpg",
-    "static/media/photographer.765786c3.jpg": "/book/static/media/photographer.765786c3.jpg",
-    "static/media/woman.7c90baa8.jpg": "/book/static/media/woman.7c90baa8.jpg"
+    "main.8fd6d1e5.css.map": "/book/static/css/main.8fd6d1e5.css.map",
+    "main.60a3f317.js.map": "/book/static/js/main.60a3f317.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.35a0726d.js",
-    "static/js/2.18d8c6f1.chunk.js",
-    "static/css/main.ced27337.chunk.css",
-    "static/js/main.fb53b899.chunk.js"
+    "static/css/main.8fd6d1e5.css",
+    "static/js/main.60a3f317.js"
   ]
 }
