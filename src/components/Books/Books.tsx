@@ -1,8 +1,5 @@
 import React from 'react';
 import './Books.scss';
-import BookOne from '../../images/book-one.png';
-import BookSecond from '../../images/book-second.png';
-import BookThree from '../../images/book-three.png';
 import Button from '../Button';
 
 
@@ -28,7 +25,8 @@ const Books = () => {
                     <div className="book">
                       <div className="book__inner">
                         <div className="book__part book-image">
-                          <img src={BookOne} alt="Inception"/>
+                          <img src={ '/images/book-one.png' } width={ 100 }
+                               height={ 100 } alt="Inception"/>
                         </div>
                         <div className="book__part book__description">
                           <div className="book-description__title">
@@ -51,7 +49,8 @@ const Books = () => {
                     <div className="book">
                       <div className="book__inner">
                         <div className="book__part book-image">
-                          <img src={BookSecond} alt="Inception"/>
+                          <img src={ '/images/book-second.png' } width={ 100 }
+                               height={ 100 } alt="Inception"/>
                         </div>
                         <div className="book__part book-description">
                           <div className="book-description__title">
@@ -74,7 +73,8 @@ const Books = () => {
                     <div className="book">
                       <div className="book__inner">
                         <div className="book__part book-image">
-                          <img src={BookThree} alt="Inception"/>
+                          <img src={ '/images/book-three.png' } width={ 100 }
+                               height={ 100 } alt="Inception"/>
                         </div>
                         <div className="book__part book-description">
                           <div className="book-description__title">
@@ -103,7 +103,7 @@ const Books = () => {
           </div>
         </div>
       </section>
-  )
-}
+  );
+};
 
 export default Books;

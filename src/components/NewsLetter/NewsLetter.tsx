@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import './NewsLetter.scss';
 import NewsLetterForm from './NewsLetterForm';

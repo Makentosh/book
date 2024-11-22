@@ -1,8 +1,5 @@
 import React from 'react';
 import './Blog.scss';
-import Photographer from '../../images/photographer.jpg';
-import Photo from '../../images/photo.jpg';
-import GirlSecond from '../../images/girl-second.jpg';
 import Button from '../Button';
 
 const Blog = () => {
@@ -28,7 +25,10 @@ const Blog = () => {
                       <div className="post__inner">
                         <div className="post__part post-photo">
                           <div className="post-photo__inner">
-                            <img src={Photographer} alt="photographer"/>
+                            <img src={ '/images/photographer.jpg' }
+                                 width={ 100 }
+                                 height={ 100 }
+                                 alt="photographer"/>
                           </div>
                         </div>
                         <div className="post__part post-description">
@@ -54,7 +54,10 @@ const Blog = () => {
                       <div className="post__inner">
                         <div className="post__part post-photo">
                           <div className="post-photo__inner">
-                            <img src={Photo} alt="photographer"/>
+                            <img src={ '/images/photo.jpg' }
+                                 width={ 100 }
+                                 height={ 100 }
+                                 alt="photographer"/>
                           </div>
                         </div>
                         <div className="post__part post-description">
@@ -80,7 +83,10 @@ const Blog = () => {
                       <div className="post__inner">
                         <div className="post__part post-photo">
                           <div className="post-photo__inner">
-                            <img src={GirlSecond} alt="photographer"/>
+                            <img src={ '/images/girl-second.jpg' }
+                                 width={ 100 }
+                                 height={ 100 }
+                                 alt="photographer"/>
                           </div>
                         </div>
                         <div className="post__part post-description">
@@ -111,7 +117,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
-  )
-}
+  );
+};
 
 export default Blog;

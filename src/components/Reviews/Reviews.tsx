@@ -1,9 +1,9 @@
+'use client';
 import React from 'react';
 import './Reviews.scss';
-import Slider from "react-slick";
-import Girl from '../../images/girl.png';
+import Slider from 'react-slick';
 
-const Reviews = ({...props}) => {
+const Reviews = ({ ...props }) => {
   let settings = {
     dots: true,
     infinite: true,
@@ -24,13 +24,14 @@ const Reviews = ({...props}) => {
             <div className="section-reviews__content">
               <div className="section-reviews__list reviews-list-wrap">
                 <ul className="reviews-list">
-                  <Slider {...settings}>
+                  <Slider { ...settings }>
                     <li className="reviews-list__item">
                       <div className="review">
                         <div className="review__inner">
                           <div className="review__part review-photo">
                             <div className="review-photo__inner">
-                              <img src={Girl} alt="Anna"/>
+                              <img src={ '/images/girl.png' } width={ 100 }
+                                   height={ 100 } alt="Anna"/>
                               <i className="fas fa-quote-right"/>
                             </div>
                           </div>
@@ -57,7 +58,8 @@ const Reviews = ({...props}) => {
                         <div className="review__inner">
                           <div className="review__part review-photo">
                             <div className="review-photo__inner">
-                              <img src={Girl} alt="Anna"/>
+                              <img src={ '/images/girl.png' } width={ 100 }
+                                   height={ 100 } alt="Anna"/>
                               <i className="fas fa-quote-right"/>
                             </div>
                           </div>
@@ -84,7 +86,8 @@ const Reviews = ({...props}) => {
                         <div className="review__inner">
                           <div className="review__part review-photo">
                             <div className="review-photo__inner">
-                              <img src={Girl} alt="Anna"/>
+                              <img src={ '/images/girl.png'  } width={ 100 }
+                                   height={ 100 } alt="Anna"/>
                               <i className="fas fa-quote-right"/>
                             </div>
                           </div>
@@ -113,7 +116,7 @@ const Reviews = ({...props}) => {
           </div>
         </div>
       </section>
-  )
-}
+  );
+};
 
 export default Reviews;

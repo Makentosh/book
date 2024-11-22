@@ -1,5 +1,6 @@
-import React from 'react';
-import { scrollToAnchor } from '../Tools';
+'use client';
+import React, { useState } from 'react';
+import MenuItem from './MenuItem';
 
 const menu = [
   { title: 'Home', hash: '#header' },
@@ -13,46 +14,29 @@ const menu = [
   { title: 'Contact', hash: '#subscribe' },
 ];
 
-
-type MenuItemT = {
-  title: string
-  hash: string
-  handleOpenDropdown?: () => void
-}
-
-const MenuItem: React.FC<MenuItemT> = ({ title, hash, handleOpenDropdown, ...props }) => {
-  let handleClick = () => {
-    scrollToAnchor(hash);
-
-    if ( handleOpenDropdown ) {
-      handleOpenDropdown();
-    }
-
-  };
-
-  return (
-      <li className="menu__item">
-        <button onClick={ handleClick }
-                className={ `menu__link ${ window.location.hash === hash ? 'active' : '' }` }>
-          { title }
-        </button>
-      </li>
-  );
-};
-
 export interface MenuInterface {
   className?: string;
   handleOpenDropdown?: () => void;
 }
 
 const Menu: React.FC<MenuInterface> = ({ className = '', handleOpenDropdown, ...props }) => {
+  const [activeHash, setActiveHash] = useState(window.location.hash);
+
+  const handleHash = (hash: string) => {
+    setActiveHash(hash);
+  };
+
   return (
       <ul className={ `menu ${ className }` }>
 
-        { menu.map((item, index) => <MenuItem title={ item.title }
-                                              key={ index }
-                                              handleOpenDropdown={ handleOpenDropdown }
-                                              hash={ item.hash }/>) }
+        { menu.map((item, index) => (
+            <MenuItem title={ item.title }
+                      key={ index }
+                      handleHash={ handleHash }
+                      activeHash={ activeHash }
+                      handleOpenDropdown={ handleOpenDropdown }
+                      hash={ item.hash }/>
+        )) }
       </ul>
   );
 };

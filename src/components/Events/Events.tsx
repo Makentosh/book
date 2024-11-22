@@ -1,6 +1,5 @@
 import React from 'react';
 import './Events.scss';
-import Woman from '../../images/woman.jpg';
 import Button from '../Button';
 
 const Events = () => {
@@ -11,7 +10,8 @@ const Events = () => {
             <div className="section-events__content">
               <div className="section-events__left section-events-photo">
                 <div className="section-events-photo__inner">
-                  <img src={Woman} alt="Emma"/>
+                  <img src={ '/images/woman.jpg' } width={ 100 }
+                       height={ 100 } alt="Emma"/>
                 </div>
               </div>
               <div className="section-events__right section-events-upcoming">
@@ -87,7 +87,7 @@ const Events = () => {
           </div>
         </div>
       </section>
-  )
-}
+  );
+};
 
 export default Events;

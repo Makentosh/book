@@ -1,6 +1,5 @@
 import React from 'react';
-import Emma from '../../images/emma.jpg'
-import './Autor.scss'
+import './Autor.scss';
 import Button from '../Button';
 
 const Author = () => {
@@ -35,7 +34,7 @@ const Author = () => {
                         mollit anim id est laborum. Sed ut
                       </div>
                       <div className="offer__part offer__price">
-                        <Button link={true}
+                        <Button link={ true }
                                 className="offer__btn"
                                 url="http://google.com.ua"
                                 title="Read full biography"/>
@@ -49,7 +48,8 @@ const Author = () => {
                 </div>
                 <div className="section-author__right section-photo">
                   <div className="section-photo__inner">
-                    <img src={Emma} alt="Emma" className="section-photo__image"/>
+                    <img src={ '/images/emma.jpg' } width={ 100 }
+                         height={ 100 } alt="Emma" className="section-photo__image"/>
                   </div>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const Author = () => {
           </div>
         </div>
       </section>
-  )
-}
+  );
+};
 
 export default Author;

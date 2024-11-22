@@ -1,15 +1,15 @@
 import React from 'react';
-import MainBook from '../../images/main-book.png';
 import Button from '../Button';
 
-const SectionOffer = ({...props}) => {
+const SectionOffer = ({ ...props }) => {
 
   return (
       <div className="header__bottom section-offer">
         <div className="section-offer__inner">
           <div className="section-offer-img">
             <div className="section-offer-img__wrap">
-              <img src={MainBook} alt="Good book"/>
+              <img src={ '/images/main-book.png'  } width={ 100 }
+                   height={ 100 } alt="Good book"/>
             </div>
           </div>
           <div className="offer">
@@ -47,7 +47,7 @@ const SectionOffer = ({...props}) => {
           </div>
         </div>
       </div>
-  )
-}
+  );
+};
 
 export default SectionOffer;
