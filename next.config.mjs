@@ -3,7 +3,7 @@
 const nextConfig = {
   basePath: process.env.NODE_ENV === 'production' ? '/book' : '',
   output: 'export',
-  // distDir: './build',
+  distDir: './build',
 };
 
 export default nextConfig;
