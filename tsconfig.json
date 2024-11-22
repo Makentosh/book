@@ -31,8 +31,9 @@
     "node_modules"
   ],
   "include": [
+    "./build/types/**/*.ts",
     "node_modules/cypress/types/cypress-global-vars.d.ts",
     "src",
-    "./build/types/**/*.ts"
+    ".next/types/**/*.ts"
   ]
 }
