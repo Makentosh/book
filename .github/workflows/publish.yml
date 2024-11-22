@@ -35,9 +35,7 @@ jobs:
           echo "Build completed successfully."
 
       - name: List exported files
-        run: |
-            ls -a
-            ls -al ./out
+        run:  ls -a
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
