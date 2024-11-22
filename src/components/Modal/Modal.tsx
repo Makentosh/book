@@ -10,7 +10,7 @@ interface ReactModalTypes {
   onRequestClose: () => void;
 }
 
-ReactModal.setAppElement('#root');
+// ReactModal.setAppElement('#root');
 
 const Modal: React.FC<ReactModalTypes> = ({
                                             size,

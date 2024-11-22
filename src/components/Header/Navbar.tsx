@@ -1,14 +1,16 @@
+'use client';
 import React, { useEffect, useState } from 'react';
-import Logo from '../../images/logo.png';
-import Menu from './Menu';
+import dynamic from 'next/dynamic';
 
-const Navbar = ({ ...props }) => {
+const Menu = dynamic(() => import('./Menu'), { ssr: false });
+
+const Navbar = () => {
   const [fixed, setFixed] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
   const offsetTopNumber = 150;
 
   let handleNavScroll = () => {
-    (document.body.scrollTop > offsetTopNumber || document.documentElement.scrollTop > offsetTopNumber)
+    ( document.body.scrollTop > offsetTopNumber || document.documentElement.scrollTop > offsetTopNumber)
         ? setFixed(true)
         : setFixed(false);
   };
@@ -16,6 +18,10 @@ const Navbar = ({ ...props }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleNavScroll);
+
+    if ( document.body.scrollTop > offsetTopNumber || document.documentElement.scrollTop > offsetTopNumber ) {
+      setFixed(true)
+    }
   }, []);
 
   useEffect(() => {
@@ -38,7 +44,10 @@ const Navbar = ({ ...props }) => {
             <div className="section-navbar__logo">
               <div className="section-navbar__logo-inner">
                 <a href="/">
-                  <img src={ Logo } alt="Bukee"/>
+                  <img src={ '/images/logo.png' }
+                       width={ 100 }
+                       height={ 100 }
+                       alt="Bukee"/>
                 </a>
               </div>
             </div>

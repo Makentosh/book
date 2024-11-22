@@ -1,9 +1,8 @@
 import React from 'react';
 import './Footer.scss';
-import FooterLogo from '../../images/footer-logo.png';
-import {FacebookIcon, SlackIcon, TweeterIcon, TwitchIcon, ViberIcon, YoutubeIcon} from '../../images';
+import { FacebookIcon, SlackIcon, TweeterIcon, TwitchIcon, ViberIcon, YoutubeIcon } from '../../icons';
 
-const Footer = ({...props}) => {
+const Footer = ({ ...props }) => {
   return (
       <footer className="footer">
         <div className="footer__inner">
@@ -14,7 +13,8 @@ const Footer = ({...props}) => {
                   <div className="footer-description">
                     <div className="footer-description__part footer-logo">
                       <div className="footer-logo__inner">
-                        <img src={FooterLogo} alt="Bukee"/>
+                        <img src={ '/images/footer-logo.png' } width={ 100 }
+                             height={ 100 } alt="Bukee"/>
                       </div>
                     </div>
                     <div className="footer-description__part footer-text">
@@ -120,7 +120,7 @@ const Footer = ({...props}) => {
           </div>
         </div>
       </footer>
-  )
-}
+  );
+};
 
 export default Footer;
