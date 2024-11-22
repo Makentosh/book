@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.scss';
 import { FacebookIcon, SlackIcon, TweeterIcon, TwitchIcon, ViberIcon, YoutubeIcon } from '../../icons';
+import generateImgPath from '../../utils/generateImgPath';
 
 const Footer = ({ ...props }) => {
   return (
@@ -13,7 +14,8 @@ const Footer = ({ ...props }) => {
                   <div className="footer-description">
                     <div className="footer-description__part footer-logo">
                       <div className="footer-logo__inner">
-                        <img src={ '/images/footer-logo.png' } width={ 100 }
+                        <img src={ generateImgPath('/images/footer-logo.png') }
+                             width={ 100 }
                              height={ 100 } alt="Bukee"/>
                       </div>
                     </div>

@@ -1,4 +1,4 @@
-@import '../../scss/variables';
+@use '../../scss/variables' as *;
 
 .header {
   padding: 50px 0 100px;

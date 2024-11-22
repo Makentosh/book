@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Button';
+import generateImgPath from '../../utils/generateImgPath';
 
 const SectionOffer = ({ ...props }) => {
 
@@ -8,7 +9,8 @@ const SectionOffer = ({ ...props }) => {
         <div className="section-offer__inner">
           <div className="section-offer-img">
             <div className="section-offer-img__wrap">
-              <img src={ '/images/main-book.png'  } width={ 100 }
+              <img src={ generateImgPath('/images/main-book.png') }
+                   width={ 100 }
                    height={ 100 } alt="Good book"/>
             </div>
           </div>

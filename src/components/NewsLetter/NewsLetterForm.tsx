@@ -5,7 +5,7 @@ import Button from '../Button';
 import { EMAIL_PATTER_VALIDATION, VALIDATION_MESSAGES } from '../Tools';
 import { useDispatch } from 'react-redux';
 import { openModalSuccess } from '../../actions/modalActions';
-import { AppDispatch } from '../../reducer/rootReducer';
+import { AppDispatch } from '../../store/rootReducer';
 
 interface FormData {
   email: string;

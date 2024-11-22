@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import generateImgPath from '../../utils/generateImgPath';
 
 const Menu = dynamic(() => import('./Menu'), { ssr: false });
 
@@ -44,7 +45,7 @@ const Navbar = () => {
             <div className="section-navbar__logo">
               <div className="section-navbar__logo-inner">
                 <a href="/">
-                  <img src={ '/images/logo.png' }
+                  <img src={ generateImgPath('/images/logo.png') }
                        width={ 100 }
                        height={ 100 }
                        alt="Bukee"/>

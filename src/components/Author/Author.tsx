@@ -1,6 +1,7 @@
 import React from 'react';
 import './Autor.scss';
 import Button from '../Button';
+import generateImgPath from '../../utils/generateImgPath';
 
 const Author = () => {
   return (
@@ -48,7 +49,7 @@ const Author = () => {
                 </div>
                 <div className="section-author__right section-photo">
                   <div className="section-photo__inner">
-                    <img src={ '/images/emma.jpg' } width={ 100 }
+                    <img src={ generateImgPath('/images/emma.jpg') } width={ 100 }
                          height={ 100 } alt="Emma" className="section-photo__image"/>
                   </div>
                 </div>

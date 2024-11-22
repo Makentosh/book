@@ -2,6 +2,7 @@
 import React from 'react';
 import './Reviews.scss';
 import Slider from 'react-slick';
+import generateImgPath from '../../utils/generateImgPath';
 
 const Reviews = ({ ...props }) => {
   let settings = {
@@ -30,7 +31,8 @@ const Reviews = ({ ...props }) => {
                         <div className="review__inner">
                           <div className="review__part review-photo">
                             <div className="review-photo__inner">
-                              <img src={ '/images/girl.png' } width={ 100 }
+                              <img src={ generateImgPath('/images/girl.png') }
+                                   width={ 100 }
                                    height={ 100 } alt="Anna"/>
                               <i className="fas fa-quote-right"/>
                             </div>
@@ -58,8 +60,10 @@ const Reviews = ({ ...props }) => {
                         <div className="review__inner">
                           <div className="review__part review-photo">
                             <div className="review-photo__inner">
-                              <img src={ '/images/girl.png' } width={ 100 }
-                                   height={ 100 } alt="Anna"/>
+                              <img src={ generateImgPath('/images/girl.png') }
+                                   width={ 100 }
+                                   height={ 100 }
+                                   alt="Anna"/>
                               <i className="fas fa-quote-right"/>
                             </div>
                           </div>
@@ -86,8 +90,10 @@ const Reviews = ({ ...props }) => {
                         <div className="review__inner">
                           <div className="review__part review-photo">
                             <div className="review-photo__inner">
-                              <img src={ '/images/girl.png'  } width={ 100 }
-                                   height={ 100 } alt="Anna"/>
+                              <img src={ generateImgPath('/images/girl.png') }
+                                   width={ 100 }
+                                   height={ 100 }
+                                   alt="Anna"/>
                               <i className="fas fa-quote-right"/>
                             </div>
                           </div>

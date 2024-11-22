@@ -1,6 +1,6 @@
-import { open, close } from '../slices/modalSlice';
+import { open, close } from '../store/modalSlice';
 import { INFO, SUCCESS } from '../components/Constants';
-import { AppDispatch } from '../reducer/rootReducer';
+import { AppDispatch } from '../store/rootReducer';
 
 export const openModalSuccess = () => (dispatch: AppDispatch) => {
   dispatch(open({ type: SUCCESS }));

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Books.scss';
 import Button from '../Button';
+import generateImgPath from '../../utils/generateImgPath';
 
 
 const Books = () => {
@@ -25,7 +26,8 @@ const Books = () => {
                     <div className="book">
                       <div className="book__inner">
                         <div className="book__part book-image">
-                          <img src={ '/images/book-one.png' } width={ 100 }
+                          <img src={ generateImgPath('/images/book-one.png') }
+                               width={ 100 }
                                height={ 100 } alt="Inception"/>
                         </div>
                         <div className="book__part book__description">
@@ -49,7 +51,8 @@ const Books = () => {
                     <div className="book">
                       <div className="book__inner">
                         <div className="book__part book-image">
-                          <img src={ '/images/book-second.png' } width={ 100 }
+                          <img src={ generateImgPath('/images/book-second.png') }
+                               width={ 100 }
                                height={ 100 } alt="Inception"/>
                         </div>
                         <div className="book__part book-description">
@@ -73,7 +76,8 @@ const Books = () => {
                     <div className="book">
                       <div className="book__inner">
                         <div className="book__part book-image">
-                          <img src={ '/images/book-three.png' } width={ 100 }
+                          <img src={ generateImgPath('/images/book-three.png') }
+                               width={ 100 }
                                height={ 100 } alt="Inception"/>
                         </div>
                         <div className="book__part book-description">

@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  basePath: process.env.NODE_ENV === 'production' ? '/book' : '',
+  basePath: isProd ? '/book' : '',
   output: 'export',
   // distDir: './build',
 };

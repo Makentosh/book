@@ -1,6 +1,7 @@
 import React from 'react';
 import './Blog.scss';
 import Button from '../Button';
+import generateImgPath from '../../utils/generateImgPath';
 
 const Blog = () => {
   return (
@@ -25,7 +26,7 @@ const Blog = () => {
                       <div className="post__inner">
                         <div className="post__part post-photo">
                           <div className="post-photo__inner">
-                            <img src={ '/images/photographer.jpg' }
+                            <img src={ generateImgPath('/images/photographer.jpg') }
                                  width={ 100 }
                                  height={ 100 }
                                  alt="photographer"/>
@@ -54,7 +55,7 @@ const Blog = () => {
                       <div className="post__inner">
                         <div className="post__part post-photo">
                           <div className="post-photo__inner">
-                            <img src={ '/images/photo.jpg' }
+                            <img src={ generateImgPath('/images/photo.jpg') }
                                  width={ 100 }
                                  height={ 100 }
                                  alt="photographer"/>
@@ -83,7 +84,7 @@ const Blog = () => {
                       <div className="post__inner">
                         <div className="post__part post-photo">
                           <div className="post-photo__inner">
-                            <img src={ '/images/girl-second.jpg' }
+                            <img src={ generateImgPath('/images/girl-second.jpg') }
                                  width={ 100 }
                                  height={ 100 }
                                  alt="photographer"/>

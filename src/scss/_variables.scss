@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use 'sass:meta';
 
 //colors
 $white: #ffffff;
@@ -42,10 +44,8 @@ $xs-min: 500;
 
 
 @mixin respond-to($name) {
-  // If the key exists in the map
-  @if map-has-key($breakpoints, $name) {
-    // Prints a media query based on the value
-    @media only screen and #{inspect(map-get($breakpoints, $name))} {
+  @if map.has-key($breakpoints, $name) {
+    @media only screen and #{meta.inspect(map.get($breakpoints, $name))} {
       @content;
     }
   }

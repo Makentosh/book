@@ -4,7 +4,7 @@ import Modal from '../Modal';
 import './SuccessModal.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModalSuccess } from '../../actions/modalActions';
-import { RootState } from '../../reducer/rootReducer';
+import { RootState } from '../../store/rootReducer';
 
 const SuccessModal = ({ ...props }) => {
   const dispatch = useDispatch();
