@@ -30,17 +30,14 @@ jobs:
           static_site_generator: next
 
       - name: Build and Export with Next.js 🏗️
-        run: npx next build
+        run: | 
+          npx next build
+          echo "Build completed successfully."
 
-      - name: Verify export folder
+      - name: List exported files
         run: |
-          if [ ! -d "./out" ]; then
-          echo "Error: Directory './out' does not exist! Export may have failed."
-          exit 1
-          fi
-
-          - name: List exported files
-            run: ls -al ./out
+            ls -a
+            ls -al ./out
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
