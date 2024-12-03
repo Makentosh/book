@@ -37,7 +37,8 @@
       background: linear-gradient(135deg, rgba(69, 112, 137, .9) 0%, rgba(81, 170, 157, .9) 100%);
       left: 0;
       right: 0;
-      transition: .3s all;
+      animation: 500ms ease-in-out 0s normal fadeInDown;
+      transition: 0.4s;
 
       @include respond-to(sm) {
 

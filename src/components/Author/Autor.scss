@@ -12,7 +12,9 @@
 
   &__container {}
 
-  &__content {}
+  &__content {
+    overflow: hidden;
+  }
 
   &__content-top {
     display: flex;
@@ -25,7 +27,9 @@
     }
   }
 
-  &__content-bottom {}
+  &__content-bottom {
+
+  }
 
 
   &__left {
@@ -99,6 +103,7 @@
         font-style: italic;
         font-size: $fs-12;
         letter-spacing: 0.05em;
+        color: $dark;
       }
     }
   }
