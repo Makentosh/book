@@ -16,10 +16,16 @@ export const AnimationProvider = ({ children }: { children: any }) => {
       textContent: 0,
       duration: 1.5,
       snap: { textContent: 1 },
-      ease: "power1.in",
+      ease: 'power1.in',
       stagger: {
         onUpdate: function () {
-          this.targets()[0].innerHTML = `${numberWithCommas(Math.ceil(this.targets()[0].textContent))}+`;
+          // @ts-ignore
+          let target = this.targets()[0];
+
+          if ( target ) {
+            target.innerHTML = numberWithCommas(Math.ceil(parseFloat(target.textContent || '0')));
+          }
+
         },
       }
 
@@ -36,7 +42,10 @@ export const AnimationProvider = ({ children }: { children: any }) => {
   }, [initStatisticsAnimation]);
 
   const numberWithCommas = (x: number): string => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+    let formatter = new Intl.NumberFormat('en-US');
+
+    return formatter.format(x);
   };
 
   const initHeaderAnimation = () => {
