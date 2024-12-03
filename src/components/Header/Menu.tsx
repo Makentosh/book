@@ -1,6 +1,7 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MenuItem from './MenuItem';
+import gsap from 'gsap';
 
 const menu = [
   { title: 'Home', hash: '#header' },
@@ -19,12 +20,18 @@ export interface MenuInterface {
   handleOpenDropdown?: () => void;
 }
 
-const Menu: React.FC<MenuInterface> = ({ className = '', handleOpenDropdown, ...props }) => {
+const Menu: React.FC<MenuInterface> = ({ className = '', handleOpenDropdown }) => {
   const [activeHash, setActiveHash] = useState(window.location.hash);
 
   const handleHash = (hash: string) => {
     setActiveHash(hash);
   };
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo('.menu li', { y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.15 });
+  }, []);
 
   return (
       <ul className={ `menu ${ className }` }>

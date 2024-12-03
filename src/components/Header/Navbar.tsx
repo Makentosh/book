@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className={ `header__top section-navbar 
                     ${ fixed ? 'fixed' : '' }` }>
           <div className="section-navbar__inner">
-            <div className="section-navbar__logo">
+            <div className="section-navbar__logo hidden">
               <div className="section-navbar__logo-inner">
                 <a href="/">
                   <img src={ generateImgPath('/images/logo.png') }
