@@ -9,7 +9,7 @@
   width: 40px;
   height: 40px;
   //transition: .3s ease all;
-  transition: .9s;
+  transition: opacity 0.3s ease, top 0.3s ease;
 
   &:hover {
     i {
