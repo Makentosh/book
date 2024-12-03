@@ -161,22 +161,22 @@
       justify-content: space-around;
       align-items: center;
 
-      @include respond-to(xs) {
-        flex-wrap: wrap;
+      @include respond-to(sm) {
+        flex-direction: column;
+        gap: 24px;
       }
 
       &__item {
         flex: 0 0 30%;
         max-width: 30%;
 
-        @include respond-to(xs) {
+        @include respond-to(sm) {
           flex: 0 0 100%;
           max-width: 100%;
-          margin-bottom: 24px;
         }
 
         &:last-child {
-          @include respond-to(xs) {
+          @include respond-to(sm) {
             margin-bottom: 0;
           }
         }

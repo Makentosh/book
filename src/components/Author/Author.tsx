@@ -4,6 +4,7 @@ import Button from '../Button';
 import generateImgPath from '../../utils/generateImgPath';
 
 const Author = () => {
+
   return (
       <section className="section-author" id="portfolio">
         <div className="section-author__inner">
@@ -49,8 +50,11 @@ const Author = () => {
                 </div>
                 <div className="section-author__right section-photo">
                   <div className="section-photo__inner">
-                    <img src={ generateImgPath('/images/emma.jpg') } width={ 100 }
-                         height={ 100 } alt="Emma" className="section-photo__image"/>
+                    <img src={ generateImgPath('/images/emma.jpg') }
+                         width={ 100 }
+                         height={ 100 }
+                         alt="Emma"
+                         className="section-photo__image"/>
                   </div>
                 </div>
               </div>
@@ -79,12 +83,12 @@ const Author = () => {
                           <div className="statistic__inner">
                             <div className="statistic__part">
                               <div className="statistic__number">
-                                5
+                                50000
                               </div>
                             </div>
                             <div className="statistic__part">
                               <div className="statistic__text">
-                                Happy readers
+                                Reviews
                               </div>
                             </div>
                           </div>
@@ -95,7 +99,7 @@ const Author = () => {
                           <div className="statistic__inner">
                             <div className="statistic__part">
                               <div className="statistic__number">
-                                15,000
+                                15000
                               </div>
                             </div>
                             <div className="statistic__part">

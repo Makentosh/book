@@ -5,7 +5,7 @@ import Main from './Main';
 import ScrollToTopButton from './ScrollToTopButton';
 import SuccessModal from './SuccessModal';
 
-const App = ({ ...props }) => {
+const App = () => {
 
   return (
       <>

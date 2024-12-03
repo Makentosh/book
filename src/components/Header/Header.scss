@@ -3,6 +3,7 @@
 .header {
   padding: 50px 0 100px;
   background: linear-gradient(135deg, rgba(69, 112, 137, 1) 0%, rgba(81, 170, 157, 1) 100%);
+  overflow: hidden;
 
   &__inner {
   }
@@ -36,6 +37,7 @@
       background: linear-gradient(135deg, rgba(69, 112, 137, .9) 0%, rgba(81, 170, 157, .9) 100%);
       left: 0;
       right: 0;
+      transition: .3s all;
 
       @include respond-to(sm) {
 
@@ -179,6 +181,7 @@
       flex: 0 0 38%;
       max-width: 36%;
       margin-right: 50px;
+      //overflow: hidden;
 
       @include respond-to(xs) {
         flex: 0 0 100%;
@@ -339,4 +342,8 @@
     transition: .5s all;
     transform: translateX(0px);
   }
+}
+
+.hidden {
+  opacity: 0;
 }
