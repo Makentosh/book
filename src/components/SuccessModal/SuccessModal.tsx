@@ -1,12 +1,14 @@
-"use client"
+'use client';
 import React from 'react';
 import Modal from '../Modal';
 import './SuccessModal.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModalSuccess } from '../../actions/modalActions';
 import { RootState } from '../../store/rootReducer';
+import SuccessModalContent from './SuccessModalContent';
 
-const SuccessModal = ({ ...props }) => {
+
+const SuccessModal = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state: RootState) => state.modal.success.isOpen);
 
@@ -16,9 +18,8 @@ const SuccessModal = ({ ...props }) => {
 
   return (
       <Modal isOpen={ isOpen }
-             onRequestClose={ handleClose }
-             title={ 'Thanks!' }>
-        <div className={'success-modal__description'}>We will contact you shortly.</div>
+             onRequestClose={ handleClose }>
+        <SuccessModalContent/>
       </Modal>
   );
 };

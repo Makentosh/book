@@ -30,6 +30,9 @@
   background: $white;
   outline: none;
   transform: translate(-50%, -50%);
+  border: 2px solid $lightgreen;
+  border-radius: 12px;
+  overflow: hidden;
 
   @include respond-to(xs) {
     display: flex;
@@ -50,16 +53,6 @@
     min-width: 800px;
   }
 
-  //&--phone {
-  //  display: flex;
-  //  align-items: center;
-  //  margin: 0;
-  //  width: 100%;
-  //  border-radius: 0;
-  //  padding: 16px;
-  //  overflow-y: scroll;
-  //  min-width: auto;
-  //}
 
   &__content {
     width: 100%;
@@ -79,9 +72,19 @@
 
   &__body {
     padding: 15px 30px;
+    min-width: 300px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
       padding: 16px;
+      min-width: auto;
+    }
+
+    @media (max-height: 300px) {
+      min-height: auto;
     }
   }
 
@@ -90,17 +93,27 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 16px;
-    right: 16px;
-    color: #fff;
+    top: 12px;
+    right: 12px;
+    color: $lightgreen;
     font-size: 16px;
     cursor: pointer;
     outline: none;
+    width: 24px;
+    height: 24px;
+
 
     &:before {
-      content: ' \2716';
-      color: #fff;
+      content: '\2716';
+      color: $dark;
       font-size: 20px;
+      transition: .2s all;
+    }
+
+    &:hover {
+      &:before {
+        color: $lightgreen;
+      }
     }
   }
 }

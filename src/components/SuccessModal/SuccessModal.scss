@@ -1,10 +1,32 @@
+@import 'src/scss/variables';
+
 .success-modal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
   &__description {
-    color: black;
+    color: $lightgreen;
     font-size: 24px;
-    margin: 0 auto;
-    font-weight: 500;
+    //margin: 0 auto;
+    font-weight: 900;
     text-align: center;
-    padding: 20px 12px;
+    text-transform: uppercase;
+    text-align: center;
+    //padding: 20px 12px;
+    max-width: 300px;
   }
+}
+
+.particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: #fff; /* Початковий колір частинки */
 }
