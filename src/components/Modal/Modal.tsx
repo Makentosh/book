@@ -10,7 +10,8 @@ interface ReactModalTypes {
   onRequestClose: () => void;
 }
 
-// ReactModal.setAppElement('#root');
+ReactModal.setAppElement('body');
+
 
 const Modal: React.FC<ReactModalTypes> = ({
                                             size,
@@ -26,6 +27,7 @@ const Modal: React.FC<ReactModalTypes> = ({
       <ReactModal isOpen={ isOpen }
                   { ...props }
                   closeTimeoutMS={ 500 }
+                  ariaHideApp={false}
                   onRequestClose={ onRequestClose }
                   className={ `modal 
                   ${ size ? `modal--${ size }` : '' }` }
@@ -33,9 +35,6 @@ const Modal: React.FC<ReactModalTypes> = ({
         <div className="modal__content">
           <div className="modal__close"
                onClick={ onRequestClose }/>
-          <div className="modal__header">
-            { title }
-          </div>
 
           <div className="modal__body">
             { children }

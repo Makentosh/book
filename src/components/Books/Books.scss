@@ -73,6 +73,7 @@
 
     .book-image {
       margin-bottom: 32px;
+      //width: 316px;
 
       @include respond-to(xs) {
         max-width: 50%;

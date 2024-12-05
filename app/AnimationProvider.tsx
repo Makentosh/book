@@ -91,31 +91,35 @@ export const AnimationProvider = ({ children }: { children: any }) => {
         .fromTo('.section-author .offer__subtitle', { opacity: 0, x: -100 }, { opacity: 1, x: 0 }, 0.4)
         .fromTo('.section-author .offer__text', { opacity: 0, y: 100 }, { opacity: 1, y: 0 }, 0.5)
         .from('.section-author .offer__price', { scale: 0, transformOrigin: 'left center' }, 0.6)
-        .from('.section-author .offer__btn-subtext', { scale: 0 }, 0.7)
-        .from(items, {
-          textContent: 0,
-          duration: 1.5,
-          snap: { textContent: 1 },
-          ease: 'power1.in',
-          stagger: {
-            onUpdate: function () {
-              // @ts-ignore
-              let target = this.targets()[0];
+        .from('.section-author .offer__btn-subtext', { scale: 0 }, 0.7);
 
-              if ( target ) {
-                target.innerHTML = numberWithCommas(Math.ceil(parseFloat(target.textContent || '0')));
-              }
+    gsap.from(items, {
+      scrollTrigger: {
+        trigger: '.section-author',
+        start: 'top top',
+      },
+      textContent: 0,
+      duration: 1.5,
+      snap: { textContent: 1 },
+      ease: 'power1.in',
+      stagger: {
+        onUpdate: function () {
+          // @ts-ignore
+          let target = this.targets()[0];
 
-            },
+          if ( target ) {
+            target.innerHTML = numberWithCommas(Math.ceil(parseFloat(target.textContent || '0')));
           }
 
-        });
+        },
+      }
+
+    });
   }, []);
 
   const initToTopButtonAnimation = () => {
     const toTopButton = document.querySelector('.to-top');
 
-    // Перевірка стану скролу при завантаженні
     if ( window.scrollY > 10 ) {
       gsap.fromTo(
           toTopButton,
@@ -125,6 +129,7 @@ export const AnimationProvider = ({ children }: { children: any }) => {
     } else {
       gsap.set(toTopButton, { opacity: 0, top: 0 });
     }
+
     //show button
     gsap.to(toTopButton, {
       scrollTrigger: {
@@ -178,10 +183,12 @@ export const AnimationProvider = ({ children }: { children: any }) => {
           x: 0
         }, 0.6)
         .fromTo('.table__btn',
-            { display: 'block',
+            {
+              display: 'block',
               scale: 0,
               rotate: -180,
-              opacity: 0 },
+              opacity: 0
+            },
             {
               scale: 1,
               rotate: 0,
@@ -192,6 +199,96 @@ export const AnimationProvider = ({ children }: { children: any }) => {
             }, 0.7);
   };
 
+  const initBooksAnimation = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section-books',
+        start: '-30% top',
+      }
+    });
+
+    tl.from('.section-books__title', {
+      scale: 0,
+      opacity: 1,
+      duration: 1
+    });
+    tl.from('.section-books__subtitle', {
+      scale: 1.5,
+      opacity: 0,
+    });
+
+    tl.from('.book', {
+      autoAlpha: 0,
+      x: -100,
+      stagger: 0.2,
+    });
+  };
+
+  const initEventsAnimations = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section-events',
+        start: '-50% top',
+        // scrub: true,
+        // pin: true,
+      },
+    });
+
+    tl
+        .from('.section-events-upcoming__author', {
+          autoAlpha: 0,
+          y: 50
+        })
+        .from('.section-events-upcoming__title', {
+          autoAlpha: 0,
+          y: 50
+        })
+        .from('.section-events-upcoming__subtitle', {
+          autoAlpha: 0,
+          y: 50
+        })
+        .from('.section-events-photo__inner img', {
+          autoAlpha: 0,
+          x: -100,
+          y: 100
+        }, 1)
+        .from('.event', {
+          autoAlpha: 0,
+          y: 100
+        }, 2)
+        .from('.event-location__date', {
+          x: -200,
+          stagger: 0.5,
+          autoAlpha: 0,
+          duration: 1,
+        }, 3);
+
+  };
+
+  const initBlogAnimations = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section-blog',
+        start: '-50% top',
+      }
+    });
+
+    tl
+        .from('.section-blog__title', {
+          autoAlpha: 0,
+          y: -50,
+        })
+        .from('.section-blog__subtitle', {
+          autoAlpha: 0,
+          y: -50,
+        })
+        .from('.post', {
+          autoAlpha: 0,
+          y: -100,
+          stagger: 0.5,
+        });
+  };
+
 
   useEffect(() => {
     if ( typeof window !== 'undefined' ) {
@@ -200,6 +297,9 @@ export const AnimationProvider = ({ children }: { children: any }) => {
       initScrollAnimations();
       initToTopButtonAnimation();
       initBookContentAnimation();
+      initBooksAnimation();
+      initEventsAnimations();
+      initBlogAnimations();
     }
   }, [initScrollAnimations]);
 

@@ -1,5 +1,10 @@
 @use 'scss/variables' as *;
 
+
+html, body {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: $OpenSans;
   font-size: $fs-16;

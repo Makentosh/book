@@ -24,9 +24,10 @@ export default function RootLayout ({ children, }: { children: React.ReactNode }
               href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
         <link rel="stylesheet" type="text/css"
               href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+        <title></title>
       </head>
       <body>
-      <div id="root">{ children }</div>
+      <div>{ children }</div>
 
       <Script src="https://kit.fontawesome.com/9f5e6efd39.js" crossOrigin="anonymous"></Script>
       </body>
