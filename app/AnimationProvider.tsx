@@ -203,7 +203,7 @@ export const AnimationProvider = ({ children }: { children: any }) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.section-books',
-        start: '-30% top',
+        start: '-50% top',
       }
     });
 
@@ -238,7 +238,7 @@ export const AnimationProvider = ({ children }: { children: any }) => {
         .from('.section-events-upcoming__author', {
           autoAlpha: 0,
           y: 50
-        })
+        }, 0.1)
         .from('.section-events-upcoming__title', {
           autoAlpha: 0,
           y: 50
@@ -246,12 +246,12 @@ export const AnimationProvider = ({ children }: { children: any }) => {
         .from('.section-events-upcoming__subtitle', {
           autoAlpha: 0,
           y: 50
-        })
+        }, 0.2)
         .from('.section-events-photo__inner img', {
           autoAlpha: 0,
           x: -100,
           y: 100
-        }, 1)
+        }, 0.1)
         .from('.event', {
           autoAlpha: 0,
           y: 100

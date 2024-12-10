@@ -7,7 +7,7 @@ const createParticles = (parent: HTMLElement | null) => {
 
   if ( !parent ) return null;
 
-  for ( let i = 0; i < 30; i++ ) {
+  for ( let i = 0; i < 100; i++ ) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
     parent.appendChild(particle);
@@ -36,7 +36,7 @@ const SuccessModalContent = () => {
         // Анімація частинок
         particles?.forEach((particle) => {
           const angle = Math.random() * Math.PI * 2;
-          const distance = Math.random() * 100;
+          const distance = Math.random() * 250;
           const randomColor = `hsl(${ Math.random() * 360 }, 100%, 70%)`;
           const targetColor = `hsl(${ Math.random() * 360 }, 100%, 70%)`;
 
