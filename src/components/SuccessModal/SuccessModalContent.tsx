@@ -10,7 +10,7 @@ const SuccessModalContent = () => {
 
   const getRandomNumber = (value: number) => {
     if ( !value ) return 0;
-    // SonarCloud: Math.random() is safe for visual effects
+    // NOSONAR: Math.random() is safe for this context
     const randomVal = Math.random();
     return randomVal * value;
   };
