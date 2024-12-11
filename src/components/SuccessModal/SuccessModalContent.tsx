@@ -11,7 +11,8 @@ const SuccessModalContent = () => {
   const getRandomNumber = (value: number) => {
     if ( !value ) return 0;
 
-    return Math.random() * value;
+    const randomVal = Math.random();
+    return randomVal * value;
   };
 
   const animateButton = useCallback(() => {
