@@ -10,8 +10,10 @@ const SuccessModalContent = () => {
 
   const getRandomNumber = (value: number) => {
     if ( !value ) return 0;
-    // NOSONAR: Math.random() is safe for this context
-    const randomVal = Math.random();
+    const array = new Uint32Array(1);
+    window.crypto.getRandomValues(array);
+    const randomVal = array[0] / (0xffffffff + 1);
+
     return randomVal * value;
   };
 
