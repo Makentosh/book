@@ -55,40 +55,21 @@ button {
   padding: 0 15px;
   width: 100%;
   margin: 0 auto;
-
-  //@include respond-to(md) {
-  //  max-width: 990px;
-  //}
-  //
-  //@include respond-to(sm) {
-  //  max-width: 750px;
-  //}
-  //
-  //@include respond-to(xs) {
-  //  max-width: 570px;
-  //}
-  //
-  //@include respond-to(es) {
-  //  max-width: 100%;
-  //}
 }
 
 
 
 .ReactModal__Overlay {
   opacity: 0;
-  //transform: translateY(-100px);
   transition: all 500ms ease-in-out;
 }
 
 .ReactModal__Overlay--after-open {
   opacity: 1;
-  //transform: translateY(0px);
 }
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
-  //transform: translateY(-100px);
 }
 
 section {
