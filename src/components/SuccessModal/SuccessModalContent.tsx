@@ -2,20 +2,13 @@ import React, { useCallback, useEffect } from 'react';
 import gsap from 'gsap';
 import { SuccessIcon } from '../../icons';
 import { createParticles } from '../../utils/generatePartials';
+import getRandomNumber from '../../utils/getRandomNumber';
 
 
 const SuccessModalContent = () => {
   const distanceLength = 200;
   const maximumHslColor = 360;
 
-  const getRandomNumber = (value: number) => {
-    if ( !value ) return 0;
-    const array = new Uint32Array(1);
-    window.crypto.getRandomValues(array);
-    const randomVal = array[0] / (0xffffffff + 1);
-
-    return randomVal * value;
-  };
 
   const animateButton = useCallback(() => {
     const button: HTMLElement | null = document.querySelector('.success-modal');
