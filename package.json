@@ -32,7 +32,11 @@
     "build": "next build",
     "start": "npx serve@latest ./build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "release:pr": "release-please release-pr",
+    "release:create": "release-please github-release"
+
+
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +71,7 @@
     "@types/react-modal": "^3.16.3",
     "@types/react-slick": "^0.23.13",
     "@typescript-eslint/parser": "^4.33.0",
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.2.0",
+    "release-please": "^17.1.2"
   }
 }
