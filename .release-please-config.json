@@ -1,0 +1,9 @@
+
+{
+  "packages": {
+    ".": {
+      "package-name": "book-react",
+      "release-type": "node"
+    }
+  }
+}
